@@ -1,0 +1,12 @@
+film.director.film: [uid] @reverse .
+film.film.genre: [uid] @reverse .
+film.film.initial_release_date: dateTime @index(day) .
+film.film.rating: [uid] @reverse .
+film.performance.character_note: string @index(exact, fulltext) @lang .
+film.film_cut.note: string @index(exact, fulltext) @lang .
+film.film.tagline: string @index(exact, fulltext) @lang .
+loc: geo @index(geo) .
+type.object.name: string @index(exact, fulltext) @lang .
+type.object.name.en: string @index(exact, fulltext) .
+type.object.name.hi: string @index(exact, fulltext) .
+type.object.name.ta: string @index(exact, fulltext) .
