@@ -58,7 +58,7 @@ sudo /usr/local/nebula/scripts/nebula.service status all
 To gurantuee Nebula always start after Linux start/restart, you need to create a service configuration file and add to systemctl.
 
 ```shell
-sudo /etc/systemd/system/nebula.service
+sudo nano /etc/systemd/system/nebula.service
 ```
 
 And then copy/paste below content into service file, press Ctrl + X to save file and quit.
@@ -77,6 +77,18 @@ WantedBy=default.target
 Add this service configuration file into systemctl.
 
 ```shell
-systemctl daemon-reload 
-systemctl enable nebula.service 
+sudo systemctl daemon-reload 
+sudo systemctl enable nebula.service 
+```
+
+5. Service Listening Ports
+
+Please enable 3699, 45500, 44500 on firewall and Network Security Group.
+
+```shell
+
+[INFO] nebula-metad: Running as 2576, Listening on 45500
+[INFO] nebula-graphd: Running as 2603, Listening on 3699
+[INFO] nebula-storaged: Running as 2652, Listening on 44500
+
 ```

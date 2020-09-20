@@ -129,3 +129,6 @@ sudo systemctl enable --now dgraph-ui
 9. Access Web UI by http://{ipaddress}:8000. At server connection UI, specify server http://{ipaddress}:8080. Login without user id and password.
 
 
+## Data import
+
+dgraph live -f 21million.rdf.gz --schema film.schema

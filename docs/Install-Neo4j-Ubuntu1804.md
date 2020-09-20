@@ -38,3 +38,17 @@ sudo add-apt-repository ppa:cleishm/neo4j
 sudo apt-get update
 sudo apt-get install neo4j-client libneo4j-client-dev
 ```
+
+5. Starting service
+
+```shell
+sudo neo4j start
+```
+
+6. Using neo4j client to connect service
+
+```shell
+neo4j-client -u neo4j localhost
+```
+It required user have to change default password 'neo4j' when first login. Now, it changed to '123456'.
+
